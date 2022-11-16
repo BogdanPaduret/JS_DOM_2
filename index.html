@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS DOM Example 1</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>JavaScript and the DOM</h1>
+        <p>Making a web page interactive</p>
+    </header>
+
+    <main>
+        <section class="list-control">
+            <hr class="first-break">
+            <button class="hide-list">Hide list</button>
+            <hr class="second-break">
+        </section>
+
+        <div class="to-hide">
+            <section class="list-description">
+                <label for="list-description-input">Label:</label>
+                <input type="text" id="list-description-input">
+                <button class="change-description">Change list description</button>
+            </section>
+
+            <section class="list-items">
+                <div class="list">
+                </div>
+                <div class="control-container">
+                    <input class="list-input" type="text">
+                    <button class="add-item">Add item</button>
+                    <button class="remove-item">Remove last item</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="/functions.js"></script>
+    <script src="/app.js"></script>
+</body>
+
+</html>

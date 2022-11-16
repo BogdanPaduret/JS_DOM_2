@@ -1,0 +1,166 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    margin-bottom: 30px;
+}
+
+header>h1{
+    margin-bottom: 20px;
+}
+
+hr{
+    border-style: dashed;
+}
+
+.first-break{
+    margin: 0px 0px 50px;
+}
+
+.second-break{
+    margin: 50px 0px 0px;
+}
+
+button{
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+}
+
+button.remove-item{
+    background-color: #798CA3;
+}
+button.add-item,
+button.change-description{
+    background-color: #5A87BA;
+}
+button.hide-list{
+    background-color: #67B0B1;
+}
+button.up{
+    background-color: #67AFB0;
+}
+button.down{
+    background-color: #5986B8;
+}
+button.remove{
+    background-color: #798BA1;
+}
+
+button.up,
+button.down,
+button.remove{
+    margin: 0px;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+input{
+    height: 35px;
+    border: 1px solid #EDEDED;
+    border-radius: 5px;
+}
+
+
+
+/* section 1 */
+.list-control{
+    margin-bottom: 50px;
+}
+
+
+
+/* section 2 */
+.to-hide{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.list-description{
+    display: grid;
+    grid-template-columns: 283px 175px;
+    gap: 10px;
+    grid-template-areas:
+    "ld-label ld-label"
+    "ld-input ld-button";
+    align-items: center;
+}
+.list-description>label{
+    grid-area: ld-label;
+    font-weight: bold;
+}
+.list-description>input{
+    grid-area: ld-input;
+}
+.list-description>button{
+    grid-area: ld-button;
+}
+
+
+
+
+/* section 3 */
+.list-items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.control-container{
+    display: grid;
+    grid-template-columns: 200px 100px 150px;
+    gap: 10px;
+    grid-template-areas:
+    "li-list li-list li-list"
+    "li-input ";
+}
+.list-items>ul{
+    grid-area: li-list;
+}
+.list-items>input{
+    grid-area: li-input;
+}
+.list-items>.add-item{
+    grid-area: li-add;
+}
+.list-items>.remove-item{
+    grid-area: li-rem;
+}
+
+button:active{
+    box-shadow: 0px 0px 10px grey;
+}
+
+div.list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+div.row{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 244px repeat(2,60px) 75px;
+    gap: 10px;
+}
+
+.list .row:first-child button.up{
+    /* border: 10px solid green; */
+    visibility: hidden;
+}
+
+.list .row:last-child button.down{
+    visibility: hidden;
+}
