@@ -158,11 +158,13 @@ div.row{
 
 .list .row:first-child button.up{
     /* border: 10px solid green; */
-    visibility: hidden;
+    /* visibility: hidden; */
+    opacity: 0.2;
 }
 
 .list .row:last-child button.down{
-    visibility: hidden;
+    /* visibility: hidden; */
+    opacity: 0.2;
 }
 
 div.row:has(button:active){
@@ -172,5 +174,7 @@ div.row:has(button:active){
 }
 
 .colorChange{
-    background-color: yellow;
+    background-color: #798CA3;
+    border: 1px solid black;
+    font-size: larger;
 }

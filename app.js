@@ -86,18 +86,24 @@ list.addEventListener("click",(e)=>{
 
     let classes=ob.className.split(" ");
 
+    let next=item.nextElementSibling;
+    let prev=item.previousElementSibling;
+    
+    console.log(next);
+    console.log(prev);
+
     // console.log(ob.tagName);
 
     if(ob.tagName=="BUTTON"){
         // console.log("CEVA!")
-        let oldClass=ob.parentNode.className;
-        ob.parentNode.className=oldClass.concat(" colorChange");
+        let oldClass=item.className;
+        item.className=oldClass.concat(" colorChange");
 
-        if(classes[1]=="up"){
+        if(classes[1]=="up" && prev!=null){
             // console.log("move item up");
             moveUp(list,item);
         }
-        if(classes[1]=="down"){
+        if(classes[1]=="down" && next!=null){
             // console.log("move item down");
             moveDown(list, item);
         }
