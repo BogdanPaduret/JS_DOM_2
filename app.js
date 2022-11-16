@@ -90,6 +90,9 @@ list.addEventListener("click",(e)=>{
 
     if(ob.tagName=="BUTTON"){
         // console.log("CEVA!")
+        let oldClass=ob.parentNode.className;
+        ob.parentNode.className=oldClass.concat(" colorChange");
+
         if(classes[1]=="up"){
             // console.log("move item up");
             moveUp(list,item);
@@ -102,5 +105,7 @@ list.addEventListener("click",(e)=>{
             // console.log("remove item");
             remove(list,item);
         }
+
+        setTimeout(function(){ob.parentNode.className=oldClass},100);
     }
 })

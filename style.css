@@ -164,3 +164,13 @@ div.row{
 .list .row:last-child button.down{
     visibility: hidden;
 }
+
+div.row:has(button:active){
+    background-color: #798CA3;
+    border: 1px solid black;
+    font-size: larger;
+}
+
+.colorChange{
+    background-color: yellow;
+}
